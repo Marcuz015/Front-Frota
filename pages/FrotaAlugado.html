@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="bg-gray-950 text-white">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frota Alugada</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<style>
+  /* Adicionar estilo para evitar flickering */
+  .dropdown-menu {
+    transform-origin: top right;
+    min-width: 8rem;
+  }
+</style>
+
+<body class="flex h-screen overflow-hidden font-sans">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-gray-900 flex flex-col justify-between p-6 shadow-lg">
+    <div>
+      <h1 class="text-2xl font-bold mb-8 text-blue-400">FrotaPlus</h1>
+      <nav class="space-y-4">
+        <a href="dashbord.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+          📊 <span>Dashboard</span>
+        </a>
+        <a href="FrotaLivre.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+          🚗 <span>Frota Livre</span>
+        </a>
+        <a href="FrotaAlugada.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+          🔒 <span>Frota Alugada</span>
+        </a>
+        <a href="Historico.html" class="flex items-center gap-2 text-white font-semibold">
+          📜 <span>Histórico</span>
+        </a>
+        <a href="configuracoes.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+          ⚙️ <span>Configurações</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="text-sm mt-8 space-y-4">
+      <a href="#" class="block text-gray-400 hover:text-white">Ajuda</a>
+      <a href="#" class="block text-gray-400 hover:text-white">Feedback</a>
+      <div class="flex items-center gap-3 mt-4">
+        <img src="https://via.placeholder.com/36" class="rounded-full border-2 border-gray-700" />
+        <div>
+          <p class="font-semibold">JJ</p>
+          <p class="text-xs text-gray-400">LittleJJ@exemplo.com</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Conteúdo Principal -->
+  <main class="flex-1 p-8 overflow-y-auto">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-semibold">Frota Alugada</h2>
+    </div>
+
+    <section>
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-semibold">Carros já alugados</h3>
+        <input type="text" placeholder="Buscar modelo ou placa" oninput="filtrarTabela(this.value)"
+          class="bg-gray-800 text-white text-sm px-3 py-2 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm text-left">
+          <thead class="text-gray-400 border-b border-gray-700">
+            <tr>
+              <th class="py-2">ID</th>
+              <th class="py-2">Modelo</th>
+              <th class="py-2">Ano</th>
+              <th class="py-2">Placa</th>
+              <th class="py-2">Status</th>
+              <th class="py-2">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="alugadosTable" class="divide-y divide-gray-800">
+            <!-- Conteúdo via JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/scriptAlugado.js"></script>
+</body>
+
+</html>

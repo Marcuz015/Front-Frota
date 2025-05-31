@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="bg-gray-950 text-white">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | FrotaPlus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="flex h-screen overflow-hidden font-sans">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-gray-900 flex flex-col justify-between p-6 shadow-lg">
+    <div>
+      <h1 class="text-2xl font-bold mb-8 text-blue-400">FrotaPlus</h1>
+      <nav class="space-y-4">
+        <a href="#" class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+          📊 <span>Dashboard</span>
+        </a>
+        <a href="FrotaLivre.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+          🚗 <span>Frota Livre</span>
+        </a>
+        <a href="FrotaAlugado.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+          🔒 <span>Frota Alugada</span>
+        </a>
+        <a href="Historico.html" class="flex items-center gap-2 text-white font-semibold">
+          📜 <span>Histórico</span>
+        </a>
+        <a href="configuracoes.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+          ⚙️ <span>Configurações</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="text-sm mt-8 space-y-4">
+      <a href="#" class="block text-gray-400 hover:text-white">Ajuda</a>
+      <a href="#" class="block text-gray-400 hover:text-white">Feedback</a>
+      <div class="flex items-center gap-3 mt-4">
+        <img src="https://via.placeholder.com/36" class="rounded-full border-2 border-gray-700" />
+        <div>
+          <p class="font-semibold">JJ</p>
+          <p class="text-xs text-gray-400">LittleJJ@exemplo.com</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-8 overflow-y-auto">
+    <header class="mb-10">
+      <h2 class="text-3xl font-bold mb-1">Olá, <span class="text-blue-400">J</span></h2>
+      <p class="text-gray-400">Olhe seus resultados</p>
+    </header>
+
+    <!-- Metrics Overview -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+      <div class="bg-gray-900 p-5 rounded-xl shadow-md">
+        <h3 class="text-sm text-gray-400">Total Gerado</h3>
+        <p class="text-2xl font-bold">R$144.981</p>
+        <span class="text-green-400 text-sm">+4.5% em relação à semana passada</span>
+      </div>
+      <div class="bg-gray-900 p-5 rounded-xl shadow-md">
+        <h3 class="text-sm text-gray-400">Esse Mês</h3>
+        <p class="text-2xl font-bold">R$455</p>
+        <span class="text-pink-400 text-sm">-0.5% em relação à semana passada</span>
+      </div>
+      <div class="bg-gray-900 p-5 rounded-xl shadow-md">
+        <h3 class="text-sm text-gray-400">Clientes Ativos</h3>
+        <p class="text-2xl font-bold">5.888</p>
+        <span class="text-green-400 text-sm">+4.5% este mês</span>
+      </div>
+      <div class="bg-gray-900 p-5 rounded-xl shadow-md">
+        <h3 class="text-sm text-gray-400">Receita Total</h3>
+        <p class="text-2xl font-bold">R$144.981</p>
+        <span class="text-green-400 text-sm">+4.5% total</span>
+      </div>
+    </section>
+
+    <!-- Gráficos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <!-- Gráfico de Barras -->
+      <section>
+        <h3 class="text-lg font-semibold mb-4">Relatório Mensal de Ganhos</h3>
+        <div class="bg-gray-900 p-4 rounded-xl shadow-md">
+          <canvas id="earningsChart" class="w-full h-64"></canvas>
+        </div>
+      </section>
+
+      <!-- Gráfico de Pizza -->
+      <section>
+        <h3 class="text-lg font-semibold mb-4">Distribuição de Ganhos</h3>
+        <div class="bg-gray-900 p-4 rounded-xl shadow-md">
+          <canvas id="distributionChart" class="w-full h-64"></canvas>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/scriptDash.js"></script>
+</body>
+</html>

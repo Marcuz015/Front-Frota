@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="bg-gray-950 text-white">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histórico de Aluguéis - FrotaPlus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="flex h-screen overflow-hidden font-sans">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-gray-900 flex flex-col justify-between p-6 shadow-lg">
+    <div>
+      <h1 class="text-2xl font-bold mb-8 text-blue-400">FrotaPlus</h1>
+      <nav class="space-y-4">
+        <a href="dashbord.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">📊
+          <span>Dashboard</span></a>
+        <a href="FrotaLivre.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">🚗
+          <span>Frota Livre</span></a>
+        <a href="FrotaAlugado.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">🔒
+          <span>Frota Alugada</span></a>
+        <a href="Historico.html" class="flex items-center gap-2 text-white font-semibold">📜 <span>Histórico</span></a>
+        <a href="Configuracoes.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition">⚙️
+          <span>Configurações</span></a>
+      </nav>
+    </div>
+
+    <div class="text-sm mt-8 space-y-4">
+      <a href="#" class="block text-gray-400 hover:text-white">Ajuda</a>
+      <a href="#" class="block text-gray-400 hover:text-white">Feedback</a>
+      <div class="flex items-center gap-3 mt-4">
+        <img src="https://via.placeholder.com/36" class="rounded-full border-2 border-gray-700" />
+        <div>
+          <p class="font-semibold">JJ</p>
+          <p class="text-xs text-gray-400">LittleJJ@exemplo.com</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Conteúdo -->
+  <main class="flex-1 p-8 overflow-y-auto">
+    <div class="mb-6">
+      <h2 class="text-2xl font-semibold">Histórico de Aluguéis</h2>
+      <p class="text-gray-400 text-sm mt-1">Veja os registros anteriores de veículos alugados.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <!-- Card de Histórico -->
+      <div class="bg-gray-900 rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Fiat Argo 1.0</h3>
+        <p class="text-sm text-gray-400 mb-1">Data de Início: <span class="text-white">10/03/2025</span></p>
+        <p class="text-sm text-gray-400 mb-1">Data de Devolução: <span class="text-white">17/03/2025</span></p>
+        <p class="text-sm text-gray-400 mb-2">Valor Total: <span class="text-teal-400 font-semibold">R$ 560,00</span>
+        </p>
+        <span class="inline-block bg-teal-600 text-sm px-3 py-1 rounded-full text-white">Finalizado</span>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Onix Plus LT</h3>
+        <p class="text-sm text-gray-400 mb-1">Data de Início: <span class="text-white">01/02/2025</span></p>
+        <p class="text-sm text-gray-400 mb-1">Data de Devolução: <span class="text-white">08/02/2025</span></p>
+        <p class="text-sm text-gray-400 mb-2">Valor Total: <span class="text-teal-400 font-semibold">R$ 720,00</span>
+        </p>
+        <span class="inline-block bg-teal-600 text-sm px-3 py-1 rounded-full text-white">Finalizado</span>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Renault Kwid</h3>
+        <p class="text-sm text-gray-400 mb-1">Data de Início: <span class="text-white">20/01/2025</span></p>
+        <p class="text-sm text-gray-400 mb-1">Data de Devolução: <span class="text-white">25/01/2025</span></p>
+        <p class="text-sm text-gray-400 mb-2">Valor Total: <span class="text-teal-400 font-semibold">R$ 480,00</span>
+        </p>
+        <span class="inline-block bg-teal-600 text-sm px-3 py-1 rounded-full text-white">Finalizado</span>
+      </div>
+
+      <!-- Adicione mais cards conforme necessário -->
+    </div>
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
